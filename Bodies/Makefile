@@ -27,7 +27,7 @@ test: all
 
 install: all
 	if [ ! -e $(INSTDIR) ] ; then mkdir $(INSTDIR) ; fi
-	cp -p -r $(TARGET) $(PACKAGE) $(INSTDIR)
+	cp -p -r $(TARGET) jp $(INSTDIR)
 	cp -R -L $(OPENGL) $(INSTDIR)
 
 
