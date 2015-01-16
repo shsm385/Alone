@@ -5,7 +5,7 @@ import os
 import urllib
 
 from jp.ac.kyoto_su.cse.sh.MVC.Model import OpenGLModel
-from jp.ac.kyoto_su.cse.sh.Parts.Polygon import OpenGLPolygon
+from jp.ac.kyoto_su.cse.sh.Parts.Triangle import OpenGLTriangle
 
 TRACE = True
 DEBUG = False
@@ -66,7 +66,7 @@ class BunnyModel(OpenGLModel):
 					if second_string == "zoom_height" and a_list[3] == "fovy":
 						self._projection.fovy_(float(a_list[4]))
 	
-				return
+		return
 
 
 	def default_window_title(self):
