@@ -5,9 +5,8 @@ import sys
 import os
 import urllib
 
-from OpenGL.GL import *
-from OpenGL.GLU import *
-from OpenGL.GLUT import *
+from jp.ac.kyoto_su.cse.sh.MVC.Model import OpenGLModel
+from jp.ac.kyoto_su.cse.sh.Parts.Polygon import OpenGLPolygon
 
 TRACE = True
 DEBUG = False
