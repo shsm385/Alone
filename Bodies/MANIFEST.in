@@ -2,5 +2,6 @@ include MANIFEST.in
 include Makefile
 include Bodies.py
 include license.txt
+include REEADME.txt
 include PyOpenGL-3.0.2.zip
 recursive-include Bodies.app *
