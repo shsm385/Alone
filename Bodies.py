@@ -1,11 +1,12 @@
 #! /usr/bin/env python
 # -*- coding: utf-8 -*-
 
-import sys ##sysをインポートしないとsys.exit()が成り立たない
+import sys ##sysをインポートしないと12行目のsys.exit()が成り立たない
 
-import jp.ac.kyoto_su.ac.cse.pl.Bodies.Example ##総理大臣の書き方でmain()までの道のり
+##from jp.ac.kyoto_su.cse.pl.Bodies.Example import Example as example ##from メインまでのファイルまでの道のり import Exampleファイル
+import jp.ac.kyoto_su.cse.pl.Bodies.Example ##総理大臣の書き方で
 
 
 if __name__ == '__main__':
-	an_example =jp.ac.kyoto_su.ac.cse.pl.Bodies.Example.Example()##importまでの道のり.クラス呼び出し
+	an_example =jp.ac.kyoto_su.cse.pl.Bodies.Example.Example()##importまでの道のり.クラス呼び出し
 	sys.exit(an_example.main())##sys.exit([arg]) pythonの終了
