@@ -58,20 +58,11 @@ class DragonModel(object):
 							self._triangles.append(a_triangle)
 		return
 
-	def display_list(self):
-	"""ドラゴンのモデルのディスプレイリスト(表示物をコンパイルしたOpenGLコマンド列)を応答する。"""
-		if TRACE: print __name__, self.display_list.__doc__
+def default_window_title(self):
+	"""ドラゴンのウィンドウのタイトル(ラベル)を応答する。"""
+		if TRACE: print __name__, self.default_window_title.__doc__
 		
-		if self._display_list == None:
-			self._display_list = glGenLists(1)
-			glNewList(self._display_list, GL_COMPILE)
-			glColor4d(0.5, 0.5, 1.0, 1.0)
-			for index, triangle in enumerate(self._triangles):
-				if DEBUG: print index,
-				triangle.rendering()
-			glEndList()
-
-	return self._display_list
+		return "Dragon"
 
 
 
