@@ -1,10 +1,13 @@
+PYTHON = python
+PYDOC = pydoc
 PYCS := $(shell find . -name "*.pyc")
 PYOPENGL	= PyOpenGL-3.0.2
 OPENGL	= OpenGL
-NAME = "filename"
+NAME = Bodies
 TARGET = Bodies.py
-PACKAGE = "プログラムの入っているパッケージ"
+PACKAGE = jp.ac.kyoto_su.cse.sh
 INSTDIR = Bodies.app/Contents/Resources/Python/
+DATA = dragon.txt wasp.txt bunny.ply penguin.txt oni.txt baby.txt
 
 all:
 	@if [ ! -e $(PYOPENGL) ] ; then unzip $(PYOPENGL).zip ; fi
@@ -13,17 +16,19 @@ all:
 clean:
 	@for each in ${PYCS} ; do echo "rm -f $${each}" ; rm -f $${each} ; done
 	if [ -e $(INSTDIR) ] ; then rm -f -r $(INSTDIR) ; fi
+	rm -f MANIFEST $(DATA)
 
 wipe:
 	if [ -e $(OPENGL) ] ; then rm -f $(OPENGL) ; fi
 	if [ -e $(PYOPENGL) ] ; then rm -f -r $(PYOPENGL) ; fi
 
 test: 
-	python ${TARGET}
+	$(PYTHON) $(TARGET)
 
-install:
+install: all
 	if [ ! -e $(INSTDIR) ] ; then mkdir $(INSTDIR) ; fi
 	cp -p -r $(TARGET) $(PACKAGE) $(INSTDIR)
+	cp -R -L $(OPENGL) $(INSTDIR)
 
 
 zip: clean
@@ -33,7 +38,7 @@ sdist: clean
 	python setup.py sdist
 
 pydoc: clean
-	(sleep 3 ; open http://localhost:9999/$(PACKAGE).html) & pydoc -p 9999
+	(sleep 3 ; open http://localhost:9999/$(PACKAGE).html) & $(PYDOC) -p 9999
 	
 
 
