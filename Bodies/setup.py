@@ -5,7 +5,7 @@ from distutils.core import setup
 
 setup(
 	name='Bodies',
-	version='1.0.0',
+	version='1.0.2',
 	author='AOKI Atsushi',
 	author_email='atsushi@cc.kyoto-su.ac.jp',
 	url='http://www.cc.kyoto-su.ac.jp/~atsushi/',

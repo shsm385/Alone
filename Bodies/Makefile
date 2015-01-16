@@ -1,7 +1,7 @@
 PYTHON = python
 PYDOC = pydoc
 PYCS := $(shell find . -name "*.pyc")
-PYOPENGL	= PyOpenGL-3.0.2
+PYOPENGL	= PyOpenGL-3.1.0
 OPENGL	= OpenGL
 NAME = Bodies
 TARGET = Bodies.py
