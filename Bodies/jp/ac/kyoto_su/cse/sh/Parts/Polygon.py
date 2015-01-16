@@ -40,3 +40,14 @@ class OpenGLPolygon(Object.OpenGLObject):
 		self._normal_unit_vector = map((lambda vector: vector / distance), normal_vector)
 	
 		return
+	def rendering(self):
+		if DEBUG: print __name__, self.rendering.__doc__
+		
+		super(OpenGLPolygon, self).rendering()
+		glBegin(GL_POLYGON)
+		glNormal3fv(self._normal_unit_vector)
+		for vertex in self._vertexes:
+			glVertex3fv(vertex)
+		glEnd()
+	
+		return
