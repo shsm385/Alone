@@ -1,0 +1,10 @@
+Metadata-Version: 1.0
+Name: Bodies
+Version: 1.0.2
+Summary: Bodies written by Python and PyOpenGL
+Home-page: http://www.cc.kyoto-su.ac.jp/~atsushi/
+Author: AOKI Atsushi
+Author-email: atsushi@cc.kyoto-su.ac.jp
+License: GNU AFFERO GENERAL PUBLIC LICENCE,Version 3(AGPL-3.0)
+Description: ドラゴン・スズメバチ・うさぎ・ペンギン・鬼・赤ちゃんを3次元描画する
+Platform: OS X (10.10.1)
